@@ -55,3 +55,50 @@
 # print(squaredArray)
 
 ##################################################
+
+#unpacking
+
+# arr=["delta","alpha","beta","gamma"]
+# a,b,c,d=arr
+# print(a)    
+# print(b)
+# print(c)
+# print(d)
+
+# tpl=("delta","alpha","beta","gamma")
+# a,b,c,d=tpl
+# print(a)
+# print(b)
+# print(c)
+# print(d)
+
+# tpl = ("delta", "alpha", "beta", "gamma","zetta")
+# i1,*i2,i3 = tpl
+# print(i1)
+# print(i2)
+# print(i3)
+
+###############################################
+
+# dict1={"a":1,"b":2,"c":3}
+# dict2 = dict(a=4, b=5, c=6)
+# print(dict1)
+# print(dict2)
+# #prior to python 3.6 it was removing any random key but in 3.6 it is removing the last key
+# dict2.popitem()
+
+#######################################################
+
+# dict1={"a":1,"b":2,"c":3}
+# for key, value in dict1.items():
+#     print(key,value)
+
+########################################################
+
+# dict1={"a":1,"b":2,"c":3}
+# dict2 = dict(a=4, b=5, c=6, d=7)
+# dict1.update(dict2)
+# print(dict1)
+# print(dict2)
+
+###########################################################
