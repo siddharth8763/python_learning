@@ -102,3 +102,60 @@
 # print(dict2)
 
 ###########################################################
+
+# myset = {}
+# print(type(myset)) #dict
+
+# myset = set()
+# print(type(myset)) #set
+
+############################################################
+
+# all properties of a set and can not modify it
+# a = frozenset({1, 2, 3})
+# a.add(2)
+
+##########################################################
+
+# s = "Hellqwerty"
+# print(s[0:])
+# print(s[:1])
+# print(s[0:len(s)])
+# print(s[0:5:2])
+# print(s[::-1])
+# print(s[-5::-3])
+
+##########################################################
+
+# print("yes" if 'e' in "hello" else "no")
+
+##########################################
+
+# s = "Hello"
+# print(s.find("el"))
+
+############################################
+
+# s="siddharth" 
+# s1 = s.replace("idd","grok") 
+# print(s)
+# print(s1)
+
+########################################
+
+# s= "howdy mate, good day"
+# print(s.split())
+# sArr = s.split(" ")
+# s1 = " ".join(sArr) 
+# print(s1) 
+
+##########################################
+
+# name = "Siddharth"
+# age = 27
+# op = "My name is {} and my age is {}".format(name,age)
+# op1 = f"my name is {name} and my age is {age}"
+# print(op)
+# print(op1)
+
+###########################################
