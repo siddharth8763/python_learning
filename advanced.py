@@ -159,3 +159,56 @@
 # print(op1)
 
 ###########################################
+
+# from collections import Counter
+# s = "siddharth"
+# my_counter = Counter(s)
+# print(my_counter) # returns a dictionary with the count of each character
+# print(my_counter['s']) # returns the count of 's'
+# print(my_counter.most_common(2)) # returns the most common 2 elements
+
+################################################
+
+# from collections import namedtuple
+# Point = namedtuple('Point', ['x', 'y'])
+# pt = Point(1, 2)
+# print(pt.x)  # 1
+# print(pt.y)  # 2
+
+###########################################################
+
+# from collections import defaultdict
+# my_dict = defaultdict(int)
+# my_dict['a'] = 1
+# my_dict['b'] = 2
+# print(my_dict['c'])  # prints 0, since 'c' is not in the dictionary
+
+#############################################################
+
+# from collections import deque
+# my_deque = deque([1, 2, 3])
+# print(my_deque)  # deque([1, 2, 3])
+# my_deque.extendleft([4,5,6])
+# print(my_deque)  # deque([6, 5, 4, 1, 2, 3])
+# my_deque.rotate(1)  # rotate the deque to the right by 1
+# print(my_deque)  # deque([3, 6, 5, 4, 1, 2])
+# my_deque.rotate(-1) # rotate the deque to the left by 1
+
+#############################################################
+
+# from itertools import product
+# a = [1, 2]
+# b = [3, 4]
+# prod = product(a, b)
+# print(list(prod))  # [(1, 3), (1, 4), (2, 3), (2, 4)]
+
+############################################################
+
+# from itertools import permutations
+# a = [1, 2, 3]
+# print(list(permutations(a)))  # [(1, 2, 3), (1, 3, 2), (2, 1, 3), (2, 3, 1), (3, 1, 2), (3, 2, 1)]
+# print(list(permutations(a, 2)))  # [(1, 2), (1, 3), (2, 1), (2, 3), (3, 1), (3, 2)]
+
+# ##############################################################
+
+
