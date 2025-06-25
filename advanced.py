@@ -211,4 +211,70 @@
 
 # ##############################################################
 
+# from itertools import combinations, combinations_with_replacement
+# a = [1, 2, 3, 4]
+# comb = combinations(a, 2)
+# print(list(comb)) # repition not allowed in this case
+# comb_wr= combinations_with_replacement(a, 2)
+# print(list(comb_wr)) #repition eg(1,1) allowed in this case
+
+######################################################################
+
+# from itertools import accumulate
+# a=[1, 2, 3, 4]
+# acc=accumulate(a)
+# print(a)
+# print(list(acc)) #1st ele remains same then 1+2=3, 3+3=6, 6+4=10
+
+#####################################################################
+
+# from itertools import accumulate
+# import operator
+# a = [1, 2, 3, 4]
+# acc=accumulate(a, func=operator.mul)
+# print(a)
+# print(list(acc)) # 1st ele remains same then 1*2=2, 2*3=6, 6*4=24
+
+#####################################################################                                   
+
+# from itertools import accumulate
+# import operator
+# a = [1, 2, 3, 4]
+# acc=accumulate(a,func=max)
+# print(a)
+# print(list(acc)) # 1st ele remains same then max(1,2)=2, max(2,3)=3, max(3,4)=4
+
+##########################################################
+
+# from itertools import groupby
+# def smaller_than_3(x): return x < 3
+# a = [1, 2, 3, 4]
+# group_obj=groupby(a, key=smaller_than_3)
+# for key, value in group_obj:
+#     print(key, list(value)) # prints the key and the values in that group
+
+##############################################################
+
+# from itertools import groupby
+# persons = [{'name': 'Tim', 'age': 25}, {'name': 'Dan', 'age': 25},{'name': 'Lisa', 'age': 27}, {'name': 'Claire', 'age': 28}]
+# group_obj=groupby(persons, key=lambda x: x['age'])
+# for key, value in group_obj:
+#     print(key, list(value)) # prints the age and the persons with that age
+
+##################################################################3
+
+# from itertools import count, cycle, repeat
+# a=[1, 2, 3]
+# for i in cycle(a):
+#     print(i) #this will run indefinitely, printing 1, 2, 3 repeatedly
+
+#####################################################################
+
+# from itertools import count, cycle, repeat
+# a = [1, 2, 3] 
+# for i in repeat(a, 2):  # repeat the list 2 times
+#     print(i)  # prints [1, 2, 3] twice
+
+###################################################################
+
 
