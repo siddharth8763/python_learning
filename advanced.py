@@ -277,4 +277,86 @@
 
 ###################################################################
 
+# add10=lambda x,y: x + y + 10 
+# print(add10(5,2))
 
+##################################################################
+
+#lambda arguments: expression
+# points2D = [(1, 2), (15, 1), (5, 1), (10, 4)]
+# points2D_sorted_1 = sorted(points2D)
+# points2D_sorted = sorted(points2D, key=lambda x: x[1])
+# print(points2D)
+# print(points2D_sorted_1) # sorted by the first element of each tuple. default
+# print(points2D_sorted) # sorted by the second element of each tuple
+
+########################################################################
+
+# a=[1, 2, 3, 4, 5]
+# b=map(lambda x: x*2, a)
+# print(list(b))
+
+# # same as 
+
+# c=[ x + 2 for x in a] 
+# print(c)
+
+########################################################
+
+# a = [1, 2, 3, 4, 5, 6]
+# b=filter(lambda x: x % 2 == 0,a)
+# print(list(b))
+
+# # # same as
+
+# c= [x for x in a if x%2==0]
+# print(c)
+
+################################################
+
+# from functools import reduce
+# a=[1, 2, 3, 4]
+# product_a=reduce(lambda x,y: x*y, a)
+# print(product_a)
+
+#################################################
+
+# x =-5
+# if x < 0:
+#     raise Exception('x should be positive')
+
+################################################
+
+# x = - 5
+# assert (x>=0), 'x is not positive'
+
+##################################################
+
+# try:
+#     a = 5 / 0
+#     b = a + 4
+# except ZeroDivisionError as e:
+#     print(e)
+# except TypeError as e:
+#     print(e)
+# else:
+#     print('everything is fine')
+# finally:
+#     print('cleaning up...')
+
+##################################################
+
+# class ValueTooHighError (Exception):
+#     pass
+
+# def test_value(x):
+#     if x > 100:
+#         raise ValueTooHighError('value is too high')
+# test_value (200)
+
+# try:
+#     test_value(200)
+# except ValueTooHighError as e:
+#     print(e)
+
+#########################################################
