@@ -360,3 +360,91 @@
 #     print(e)
 
 #########################################################
+
+# import logging
+# logging.basicConfig(
+# 	level=logging.DEBUG,
+# 	format='%(asctime)s %(name)s %(levelname)s %(message)s',
+# 	datefmt='%m/%d/%Y %I:%M:%S %p'
+# )
+# logging.debug('This is a debug message')
+# logging.info('This is an info message')
+# logging.warning('This is a warning message')
+# logging.error('This is an error message')
+# logging.critical('This is a critical message')
+
+############################################################
+
+#helper.py
+# import logging
+# logger=logging.getLogger(__name__)
+# logger.info('hello from helper')
+
+# import logging
+# logging.basicConfig(
+# 	level=logging.DEBUG,
+# 	format='%(asctime)s %(name)s %(levelname)s %(message)s',
+# 	datefmt='%m/%d/%Y %I:%M:%S %p'
+# )
+# from helper import logger
+# logger.info('hello from main')
+
+###########################################################################
+
+# import logging
+# logger=logging.getLogger(__name__)
+
+# stream_h=logging.StreamHandler()
+# file_h=logging.FileHandler('app.log')
+
+# stream_h.setLevel(logging.WARNING)
+# file_h.setLevel(logging.ERROR)
+
+# formatter = logging.Formatter('%(asctime)s %(name)s %(levelname)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
+# stream_h.setFormatter(formatter)
+# file_h.setFormatter(formatter)
+
+# logger.addHandler(stream_h)
+# logger.addHandler(file_h)
+
+# logger.warning('This is a warning message')
+# logger.error('This is an error message')
+
+########################################################################
+
+
+# import logging
+# import traceback
+# a = [1, 2, 3]
+# try:
+#     a[5]
+# except IndexError as e:
+#     # logging.error(e, exec_info=True)  # This will log the error with traceback. either this or the next line can be used
+#     logging.error(traceback.format_exc())  # This will log the traceback as a string
+
+#########################################################################
+
+# import logging
+# from logging.handlers import RotatingFileHandler
+# logger=logging.getLogger(__name__)
+# logger.setLevel(logging.INFO)
+# #roll over after 266, and keep backup logs app.log.1, app.log.2, etc
+# handler=RotatingFileHandler('app.log', maxBytes=2000, backupCount=5)
+# logger.addHandler (handler)
+# for _ in range(10000):
+#     logger.info('Hello, world!')
+
+#####################################################
+
+# import logging
+# import time
+# from logging.handlers import TimedRotatingFileHandler
+# logger=logging.getLogger(__name__)
+# logger.setLevel(logging.INFO)
+# handler=TimedRotatingFileHandler('timed_test.log', when='s', interval=5, backupCount=5)
+# logger.addHandler(handler)
+# for _ in range(6):
+#     logger.info("Hello, world!")
+#     time.sleep(5)
+
+#####################################
