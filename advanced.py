@@ -448,3 +448,75 @@
 #     time.sleep(5)
 
 #####################################
+
+# import json
+# #serilization
+# person = {"name": "John", "age": 30, "city": "New York", "hasChildren": False, "titles": ["engineer", "programmer"]}
+# personJSON=json.dumps(person, indent=4, sort_keys=True)
+# print(personJSON)
+
+# #optional: writing to a file
+# with open('person.json', 'w') as file:
+#     json.dump(person, file,indent=4, sort_keys=True)
+
+# #deserialization
+# person_dict = json.loads(personJSON)
+# print(person_dict)
+
+# #optional: reading from a file
+# with open('person.json', 'r') as file:
+#     person_dict_from_file = json.load(file)
+#     print(person_dict_from_file)
+
+##############################################
+
+# custom serialization with json
+# import json
+# class User:
+#     def _init_(self, name, age):
+#         self.name = name
+#         self.age=age
+
+# user=User ('Max', 27)
+
+# def encode_user(o):
+#     if isinstance(o, User):
+#         return {'name': o.name, 'age': o.age, o._class_name_: True}
+#     else:
+#         raise TypeError('Object of type user is not serializable')
+
+# userJSON = json.dumps(user,default=encode_user, indent=4)
+# print(userJSON)
+
+#################################################################
+# import json
+# from json import JSONEncoder
+
+# class User:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+
+# user = User('Max', 27)
+
+# # custom serialization with JSONEncoder
+# class UserEncoder(JSONEncoder):
+#     def default(self, o):
+#         if isinstance(o, User):
+#             return {'name': o.name, 'age': o.age, o.__class__.__name__: True}
+#         return JSONEncoder.default(self, o)
+
+# userJSON = UserEncoder().encode(user)
+# print(userJSON)
+
+# # custom deserialization
+# # using object_hook to decode JSON back to User object
+# def decode_user(dct):
+#     if User.__name__ in dct:
+#         return User(name=dct['name'], age=dct['age'])
+#     return dct
+
+# user=json.loads(userJSON, object_hook=decode_user)
+# print(user.name)
+
+################################################################
