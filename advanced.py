@@ -1,3 +1,5 @@
+# https://www.python-engineer.com/courses/advancedpython/01-lists/
+# https://github.com/patrickloeber/python-engineer-notebooks/tree/master/advanced-python
 # # sort (inplace) and sorted (creates a new list)
 # arr=[1,2,3,4,5]
 # # arr.sort(reverse=True)
